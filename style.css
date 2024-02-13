@@ -1,0 +1,94 @@
+
+.card{
+    background-color: rgb(29, 67, 240);
+    color: white;
+}
+
+body{
+   background-color: rgb(122, 144, 241);
+}
+
+h1{
+    align-self: center;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+}
+
+.form-div {
+    margin-top: 10px;
+}
+
+.form-div input{
+    padding-top: 10px;
+}
+
+.form-div label{
+    /* padding-top: 10px; */
+    font-size: 20px;
+}
+
+
+.col-form-label{
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.rating input{
+    display: none;
+}
+
+.rating label::before{
+    content: '\f005';
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.rating>label{
+    float: right;
+    transform: 0.2s;
+  }
+
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label
+{
+color:gold;
+}
+
+.btn{
+    background-color: rgb(29, 67, 240);
+    border-color: rgb(8, 50, 240);
+    color: white;
+}
+
+.btn:hover{
+    background-color: rgb(6, 33, 151);
+}
+
+
+
+#search{
+    float: right;
+    margin-right: 150px;
+}
+
+
+
+.rating label{
+    display: flex;
+    cursor: pointer;
+    background: #ccc;
+}
+
+.rating label::before{
+    content: 'f005';
+}
+
