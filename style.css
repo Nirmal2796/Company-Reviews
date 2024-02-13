@@ -42,7 +42,7 @@ img{
 
 .rating label::before{
     content: '\f005';
-    font-family: FontAwesome;
+    font-family: fontAwesome;
     font-size: 1.5rem;
     display: inline-block;
     cursor: pointer;
@@ -80,15 +80,8 @@ color:gold;
     margin-right: 150px;
 }
 
-
-
-.rating label{
+.searchForm-div{
     display: flex;
-    cursor: pointer;
-    background: #ccc;
+    justify-content: center;
+    margin-top: 10px;
 }
-
-.rating label::before{
-    content: 'f005';
-}
-
