@@ -80,17 +80,26 @@ async function searchReview(e){
             let reviews=await axios.get(`http://localhost:3000/comapny-review/${searchName.value}`);
 
            
-
-            const child=`<h2> Company Name : ${searchName.value} </h2>
-            <br>`;
-
-            reviewDiv.innerHTML=reviewDiv.innerHTML+child;
-
-            // console.log(reviews.data);
-            for(let review in reviews.data){
-                // console.log(reviews.data[review]);
-                showReview(reviews.data[review],searchName.value);
-            }
+           if(reviews.data){
+                
+               const child=`<h2> Company Name : ${searchName.value} </h2>
+               <br>`;
+   
+               reviewDiv.innerHTML=reviewDiv.innerHTML+child;
+   
+               // console.log(reviews.data);
+               for(let review in reviews.data){
+                   // console.log(reviews.data[review]);
+                   showReview(reviews.data[review],searchName.value);
+               }
+           }
+           else{
+                searchMsg.innerHTML = `<b>No Reviews For Company ${searchName.value}</b>`;
+            
+                setTimeout(() => {
+                    searchMsg.removeChild(searchMsg.firstChild);
+                }, 2000);
+           }
 
             searchForm.reset();
 
